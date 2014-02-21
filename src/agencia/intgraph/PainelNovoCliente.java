@@ -65,6 +65,7 @@ public class PainelNovoCliente extends JPanel{
 	
 	private final MaskFormatter mask = new MaskFormatter();
 	private final MaskFormatter maskData = new MaskFormatter();
+	private final MaskFormatter maskData2 = new MaskFormatter();
 	private final MaskFormatter maskConta = new MaskFormatter();
 	
 	public PainelNovoCliente() {
@@ -266,7 +267,8 @@ public class PainelNovoCliente extends JPanel{
 			mask.install(textDocumento);
 			
 			maskData.setMask("##/##/####");
-			maskData.install(textDataAbertura);
+			maskData2.setMask("##/##/####");
+			maskData2.install(textDataAbertura);
 			maskData.install(textAniversario);
 			
 			maskConta.setMask("##.#####.#");
