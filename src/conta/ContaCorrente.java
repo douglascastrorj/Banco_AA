@@ -1,14 +1,23 @@
 package conta;
 
-public class ContaCorrente extends ContaBancaria {
+import cliente.Cliente;
+import enums.TipoContas;
 
+public class ContaCorrente extends ContaBancaria {
+	
+//	Atributos
+
+	private static TipoContas tipo = TipoContas.CONTA_CORRENTE;
+		
 	private double taxaJuros;
 	private double limiteSaque;
 	private double taxaServico;
 
 	
-	public ContaCorrente() {
+	public ContaCorrente(Cliente cliente) {
 		// TODO Auto-generated constructor stub
+		
+		super(tipo, cliente);
 		
 		this.setTaxaJuros(7.0);
 		this.setLimiteSaque(200.00);
@@ -40,7 +49,7 @@ public class ContaCorrente extends ContaBancaria {
 	}
 	
 	
-
+//	Gets 'n' Sets
 	public double getTaxaJuros() {
 		return taxaJuros;
 	}
@@ -64,5 +73,8 @@ public class ContaCorrente extends ContaBancaria {
 	public void setTaxaServico(double taxaServico) {
 		this.taxaServico = taxaServico;
 	}
+
+	
+	
 
 }

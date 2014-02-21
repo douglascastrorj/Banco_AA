@@ -1,14 +1,21 @@
 package conta;
 
+import cliente.Cliente;
 import data.Data;
+import enums.TipoContas;
 
 public class ContaPoupanca extends ContaBancaria {
+	
+//	Atributos
+	
+	private static TipoContas tipo = TipoContas.CONTA_POUPANCA;
 	
 	private Data dataAniversario;
 	private double taxaRendimento;
 	
-	public ContaPoupanca() {
+	public ContaPoupanca(Cliente cliente) {
 		// TODO Auto-generated constructor stub
+		super(tipo, cliente);
 		
 		this.setTaxaRendimento(0.1);
 	}
@@ -21,6 +28,8 @@ public class ContaPoupanca extends ContaBancaria {
 		
 	}
 	
+	
+//	Gets 'n' Sets
 	public Data getDataAniversario() {
 		return dataAniversario;
 	}

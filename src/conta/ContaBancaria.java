@@ -1,9 +1,13 @@
 package conta;
 
+import cliente.Cliente;
+import enums.TipoContas;
+
 public abstract class ContaBancaria extends Conta {
 	
-	public ContaBancaria() {
+	public ContaBancaria(TipoContas tipo, Cliente cliente) {
 		// TODO Auto-generated constructor stub
+		super(tipo, cliente);
 	}
 	
 //	Metodo creditar
